@@ -15,23 +15,23 @@ oleh karena itu proyek ini dibuat karena tingginya tingkat menonton anime di Ind
 
 Berdasarkan Latar belakang diatas bisa kita simpulkan permasalahan dan goal yang akan dicapai pada proyek ini:
 
-- Bagaimana cara analisis data dan pemrosesan data sehingga bisa digunakan pada model rekomendasi?
-- Bagaimana sistem memberikan sejumlah rekomendasi movieTV yang diberikan model oleh pengguna?
+- Bagaimana cara analisis dan pemrosesan data sehingga bisa digunakan pada model rekomendasi?
+- Bagaimana sistem memberikan sejumlah rekomendasi anime yang diberikan model oleh pengguna?
 
 ### Goals
 
 Goals dari proyek ini :
 - Mendapat data yang sudah dianalisis dan bisa digunakan pada model rekomendasi.
-- Merekomendasikan MovieTV kepada user oleh sistem rekomendasi menggunakan teknik content-based filtering.
+- Merekomendasikan anime kepada user oleh sistem rekomendasi menggunakan teknik content-based filtering.
 
 ### Solution statements
 Berikut merupakan solusi yang bisa dilakukan guna memenuhi goals:
 
-- Melakukan Eksploratory data dimana didalamnya termasuk seperti, analisa, eksplorasi, processing data, handling missing value, degnga visualisasi data lebih mudah dilihat dan dimengerti, berikut analisa yang bisa dilakukan:
+- Melakukan Eksploratory data dimana didalamnya termasuk seperti, analisa, eksplorasi, processing data, handling missing value, dengan visualisasi data lebih mudah dilihat dan dimengerti, berikut analisa yang bisa dilakukan:
 
  * Menangalisis pesebaran data pada kolom.
  * Handling Missing value pada data.
- * Membuat sistem rekomendasi yang bisa memberikan rekomendasi movie kepada user.
+ * Membuat sistem rekomendasi yang bisa memberikan rekomendasi anime kepada user.
 
 - Dalam proyek ini saya menggunakan teknik Content-based Filtering dimana teknik ini akan merekomendasika item yang mirip dengan item yang disukai oleh user, kebetulan pada proyek ini kita gunakan **genre** sebagai parameter Content basednya dengan memanfaatkan 
  - TF-IDF Vectorizer  
