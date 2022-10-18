@@ -42,7 +42,7 @@ didalamnya.
 Dataset yang saya gunakan adalah Movie Recommendation yang saya ambil dari kaggle 
 [Kaggle](https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database)
 
-Pada dataset ini memiliki **37711** entries dan **19** kolom dimana didalamnya seperti berikut:
+Pada dataset ini memiliki **12294** entries dan **7** kolom dimana didalamnya seperti berikut:
 
 Dataset yang saya ambil adalah dataset publik yang berasal dari kaggle, berikut keterangan mengenai variabel didalmnya :
 
