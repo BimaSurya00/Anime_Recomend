@@ -46,25 +46,13 @@ Pada dataset ini memiliki **12294** entries dan **7** kolom dimana didalamnya se
 
 Dataset yang saya ambil adalah dataset publik yang berasal dari kaggle, berikut keterangan mengenai variabel didalmnya :
 
-- filmtv_id : id film
-- title : judul film
-- year : tahun rilis film
-- genre : genre dalam movie E.g Adventure, Horror, Thrille
-- duration : durasi film
-- country : asal negara film
-- director : direktor film
-- actors : aktor yang memerankan film
-- avg_vote : rata rata vote film
-- public_vote : publik vote film
-- critic_vote : vote kritik pada film
-- total_votes : total vote yang didapat film
-- description : deksripsi film
-- notes : catatan film
-- humor : skor humor film yang diberikan oleh filmtv
-- rhythm : skor ritme film yang diberikan oleh filmtv
-- effort : skor upaya film yang diberikan oleh filmtv
-- tension : skor ketegangan film yang diberikan oleh filmtv
-- erotism : skor erotisme film yang diberikan oleh filmtv
+- anime_id
+- name
+- genre
+- type
+- episodes
+- rating
+- members
 
 ## Explatory Data Anlysis
 - Drop Colomn
