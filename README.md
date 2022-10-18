@@ -40,7 +40,7 @@ didalamnya.
 
 ## Data Understanding
 Dataset yang saya gunakan adalah Movie Recommendation yang saya ambil dari kaggle 
-[Kaggle](https://www.kaggle.com/datasets/stefanoleone992/filmtv-movies-dataset).
+[Kaggle][(https://www.kaggle.com/code/ajmichelutti/collaborative-filtering-on-anime-data).]
 
 Pada dataset ini memiliki **37711** entries dan **19** kolom dimana didalamnya seperti berikut:
 
