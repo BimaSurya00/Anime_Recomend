@@ -5,9 +5,9 @@
 Domain yang dipilih pada proyek ini adalah Anime, sistem rekomendasi untuk menentukan dan filtering Anime.
 
 ## Latar Belakang
-Movie atau film sangat populer dikalangan remaja saat ini bahkan sekarang bisa dikatakan semua umur cocok dengan film dengan sesuai genrenya masing masing juga, rata rata Remaja menyukai genre Romance , Adventure dan banyak lainya.
+Anime sangat populer dikalangan remaja saat ini bahkan sekarang bisa dikatakan semua umur cocok dengan Anime dengan sesuai genrenya, Anime adalah gambaran yang bisa digambar menggunakan tulis tangan ataupun teknologi komputer. Anime sangat populer di dalam dan di luar Jepang sehingga banyak situs atau sistem steaming online yang memungkinkan pengguna untuk menonton anime dimana saja. Namun, jumlah anime yang beredar saat ini sangatlah banyak dan juga membuat penikmatnya kebingungan saat akan memilih genre atau selera anime apa yang ingin ditonton. 
 
-oleh karena itu proyek ini dibuat dengan mengadopsi tingginya tingkat menonton film di Indonesia atau bahkan dunia, dimana para penonton akan dapat mudah menemui film film yang bergenre dengan keinginan mereka sehingga mereka akan menonton rekomendasi yang model berikan dan itu akan sangat membantu baik untuk perusahaan pembuat film ataupu bagi penonton itu sendiri.
+oleh karena itu proyek ini dibuat karena tingginya tingkat menonton anime di Indonesia atau bahkan dunia, dimana para penonton akan dapat mudah menemui anime yang bergenre dengan keinginan mereka sehingga mereka akan menonton rekomendasi yang model berikan dan itu akan sangat membantu baik untuk perusahaan anime dan juga penikmatnya.
 
 ## Business Understanding
 
