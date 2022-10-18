@@ -2,7 +2,7 @@
 
 ## Domain Proyek
 
-Domain yang dipilih pada proyek ini adalah Film, Entertaiment yang berjudul MovieTV Recommendation System
+Domain yang dipilih pada proyek ini adalah Anime, sistem rekomendasi untuk menentukan dan filtering Anime.
 
 ## Latar Belakang
 Movie atau film sangat populer dikalangan remaja saat ini bahkan sekarang bisa dikatakan semua umur cocok dengan film dengan sesuai genrenya masing masing juga, rata rata Remaja menyukai genre Romance , Adventure dan banyak lainya.
