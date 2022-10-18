@@ -55,18 +55,10 @@ Dataset yang saya ambil adalah dataset publik yang berasal dari kaggle, berikut 
 - members
 
 ## Explatory Data Anlysis
-- Drop Colomn
-pada tahap ini saya drop beberapa kolom yang dapat mengganggu pada saat pemodelan agar nanti pada tahap pemodelan tidak ada kolom yang menghambat, diantaranya ada _notes,critic_vote_ dan _description_
+- membuat sebuah analysis mengenai type anime yang ada pada data.
 
-- Handling missing value pada dateset
+![type_anime]![](https://user-images.githubusercontent.com/105061172/196426680-33874fa0-66e1-4a19-b9b5-ce3e50b99cbd.png)
 
-Pada dataset masih banyak terdapat missing value pada beberapa kolom dan masih lumayan banyak dan masih tersebar didalamnya dengan total sebanyak **2213 records**, oleh karena itu kita drop seluruh missing value dalam dataset.
-
-Setelah berhasil didrop data yang memiliki missing value dataset kini memiliki **34016 records** dan **16 kolom** yang sudah bisa dipakai untuk modelling tanpa adanya missing values.
-
-- Visualisasi Setiap Movie kebanyakan memiliki genre Movie sebagai berikut 
-
-![genre_terbanyak](https://user-images.githubusercontent.com/73319544/192697326-8853e5b3-acf3-4b17-8b4c-f704751cd7b5.png)
 
 Gambar .4 genre TV
 
