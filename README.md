@@ -32,11 +32,7 @@ Berikut merupakan solusi yang bisa dilakukan guna memenuhi goals:
  * Menangalisis pesebaran data pada kolom.
  * Handling Missing value pada data.
  * Membuat sistem rekomendasi yang bisa memberikan rekomendasi anime kepada user.
-
-- Dalam proyek ini saya menggunakan teknik Content-based Filtering dimana teknik ini akan merekomendasika item yang mirip dengan item yang disukai oleh user, kebetulan pada proyek ini kita gunakan **genre** sebagai parameter Content basednya dengan memanfaatkan 
- - TF-IDF Vectorizer  
- - Cosine similarity
-didalamnya.
+- Menyiapkan data agar bisa digunakan dalam membangun model
 
 ## Data Understanding
 Dataset yang saya gunakan adalah Movie Recommendation yang saya ambil dari kaggle 
