@@ -167,6 +167,10 @@ mengingat kita mencari rekomendasi berdasarkan Name yang dimiliki oleh Anime, ma
 
 #### `P =(  # of our recommendations that are relevant) / (# of items we recommended)`
 
+Untuk p = 1, karena rekomendasi yang relevan dibagi dengan Anime yang kita rekomendasikan yang mana untuk rekomendasi relevan = 5, Anime yang direkomendasi = 5.
+
+Maka, 5/5 = 1
+
 Pada rumus diatas kita bisa mengetahui presisi dari rekomendasi yang kita berikan. kita telah memberikan 5 rekomendasi berdasarkan genre melalui nama Gintama dan One Piece, dan sistem memberikan kita rekomendasi yang sama. dengan perhitungan **(rekomendasi yang relevan) / (item yang kita rekomendasikan)** 
 
 oleh karena itu dengan rumus perhitungan sederhana pada rumus diatas sistem rekomendasi bisa memilki presisi yang sangat baik.
