@@ -101,7 +101,7 @@ Berikut saya masukkan beberapa name Anime yang akan direkomendasikan:
 |---|---|---|---|---|---|---|
 |16|Shigatsu wa Kimi no Uso|Drama, Music, Romance, School, Shounen|TV|22|8\.92|416397|
 
-Tabel .1 Shigatsu wa kimi no uso Anime
+Tabel 1. Shigatsu wa kimi no uso Anime
 
 - berikut output dari rekomendasinya Anime **Shigatsu wa kimi no uso**
 
