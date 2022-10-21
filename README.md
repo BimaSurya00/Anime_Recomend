@@ -97,11 +97,11 @@ Content Based Filtering merekomendasikan item yang mirip dengan item sebelumnya 
 
 ### Hasil pemodelan
 
-Berikut saya masukkan beberapa title MovieTV yang akan direkomendasikan:
+Berikut saya masukkan beberapa name Anime yang akan direkomendasikan:
 
-|no|title                                                                                                |genre                                                                                                                        |year   |country |
-|--------|----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|-------|--------|
-|1   |Dinner                                                                                      |Comedy                                                                                         |1989  |United States       |
+|index|name|genre|type|episodes|rating|members|
+|---|---|---|---|---|---|---|
+|16|Shigatsu wa Kimi no Uso|Drama, Music, Romance, School, Shounen|TV|22|8\.92|416397|
 
 Tabel .1 dinner MovieTV
 
