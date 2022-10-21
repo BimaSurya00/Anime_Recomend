@@ -35,65 +35,63 @@ Berikut merupakan solusi yang bisa dilakukan guna memenuhi goals:
 - Menyiapkan data agar bisa digunakan dalam membangun model
 
 ## Data Understanding
-Dataset yang saya gunakan adalah Movie Recommendation yang saya ambil dari kaggle 
-[Kaggle](https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database)
+Dataset yang saya gunakan adalah Movie Recommendation yang saya ambil dari
+[Kaggle](https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database).
 
 Pada dataset ini memiliki **12294** entries dan **7** kolom dimana didalamnya seperti berikut:
 
 Dataset yang saya ambil adalah dataset publik yang berasal dari kaggle, berikut keterangan mengenai variabel didalmnya :
 
-- anime_id
-- name
-- genre
-- type
-- episodes
-- rating
-- members
+- anime_id : kode berdasarkan anime
+- name     : nama anime
+- genre    : jenis plot atau alur cerita dari anime
+- type     : type anime 
+- episodes : riwayat atau peristiwa dari anime
+- rating   : penilaian anime
+- members  : jumlah penonton anime
 
-## Explatory Data Anlysis
+## Explatory Data Analysis
+- Drop Colomn
+pada tahap ini saya drop beberapa kolom yang dapat mengganggu pada saat pemodelan agar nanti pada tahap pemodelan tidak ada kolom yang menghambat, diantaranya ada "Anime_id"
+- Handling missing value pada dateset
+
 - membuat sebuah analysis mengenai type anime yang ada pada data.
 
-![type_anime]![](https://user-images.githubusercontent.com/105061172/196426680-33874fa0-66e1-4a19-b9b5-ce3e50b99cbd.png)
+![1](https://user-images.githubusercontent.com/105061172/197259162-cc5cac3a-79c3-44d8-90a4-922ed1d0d8d5.png)
 
 
-Gambar .4 genre TV
 
-Pada Gambar .4 kita bisa lihat bahwa genre terbanyak dalam Movie dimiliki oleh genre **Drama** dan **Comedy** 
+Gambar .4 type Anime
 
-- Visualisasi Setiap Movie kapan dirilis 
+Pada Gambar .4 kita bisa lihat bahwa type terbanyak dalam Movie dimiliki oleh type **TV** dan **OVA** 
 
-![tahun_tv](https://user-images.githubusercontent.com/73319544/192697562-00a62b08-0bb2-4b4f-af59-4ac49828085f.png)
-
-Gambar .5 tahun rilis MovieTV
-
-pada Gambar .5 lihat bahwa semakin tahun produksi film semakin meningkat cukup pesat, dengan adanya teknologi khusus tahun demi tahun film menjadi bagian penting dalam peradaban.
 
 ## Data Preparation
 
 Berikut tahapan dalam pemrosesan data:
 
 ### Menghapus Fitur yang tidak diperlukan
-Karena pada proyek ini kita tidak memerluka fitur seperti **'notes' 'critics_vote' 'description'** maka kita bisa drop fitur tersebut.
+Karena pada proyek ini kita tidak memerlukan fitur seperti **'Anime_id'** maka kita bisa drop fitur tersebut.
 
 ### Handling missing value
-pada tahap ini dalamprojek kita melakukan handling missing value dengan drop seluruh data yang memiliki missing value agar pada saat modelling tidak terhabat oleh data yang missing.
+pada tahap ini dalam projek kita melakukan handling missing value dengan drop seluruh data yang memiliki missing value agar pada saat modelling tidak terhabat oleh data yang missing.
 ada dua teknik dalam handling missing value diantaranya adalah drop value yang kita gunakan pada proyek ini atau mengisi mising value dengan nilai rata rata.
 
 ## Modeling
 
 ### Content Based Filtering
-Content Based Filtering merekomendasikan item yang mirip dengan item sebelumnya yang disukai atau dipilih oleh penonton MovieTV, kemiripan item dihitung berdasarkan fitur yang ada dalam item yang dibandingkan, berikut merupakan parameternya :
+Content Based Filtering merekomendasikan Anime berdasarkan Genre sebelumnya yang disukai atau dipilih oleh penonton Anime, kemiripan Anime dihitung berdasarkan fitur yang ada dalam item yang dibandingkan, berikut merupakan parameternya :
 
-- movie_name : berisi nama MovieTV yang ingin dicari rekomendasinya.
+- Anime_name : berisi nama Anime yang ingin dicari rekomendasinya.
 - similarity_data : berisi dataframe yang berisi similarity yang telah didefinisakan menggunakan cosine similarity.
-- items : berisi nama nama fitur yang akan dimunculkan pada saat direkomendasikan, disini saya menaruh fitur **'title', 'year', 'genre', 'year', 'public_vote'**.
-- k : banyaknya MovieTV film yang ingin direkomendasikan, disini saya menaruh 10 rekomendasi film yang akan ditampilkan
+- items : berisi nama nama fitur yang akan dimunculkan pada saat direkomendasikan, disini saya menaruh fitur **'Name', 'Genre', 'Episode', 'Rating'**.
+- k : banyaknya Anime film yang ingin direkomendasikan, disini saya menaruh 5 rekomendasi film yang akan ditampilkan
 
 -kelebihan
  -  mudah digunakan untuk mencari kemiripan pada data untuk rekomendasi.
  
 -kekurangan
- - item yang akan dimunculkan terbatas.
+ - Anime yang akan dimunculkan terbatas.
 
 ### Hasil pemodelan
 
@@ -103,87 +101,73 @@ Berikut saya masukkan beberapa name Anime yang akan direkomendasikan:
 |---|---|---|---|---|---|---|
 |16|Shigatsu wa Kimi no Uso|Drama, Music, Romance, School, Shounen|TV|22|8\.92|416397|
 
-Tabel .1 dinner MovieTV
+Tabel .1 Shigatsu wa kimi no uso Anime
 
-- berikut output dari rekomendasinya film **Dinner**
+- berikut output dari rekomendasinya Anime **Shigatsu wa kimi no uso**
 
-|no|title                                                                                                |genre                                                                                                                        |year   |public_vote|
-|--------|----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|-------|--------|
-|1   |Malizia                                                                                      |Comedy                                                                                         |1973  |6.0       |
-|2    |Crooklyn                                                                   |Comedy                                                                  |1994     |8.0      |
-|3   |Manolesta                                                                                    |Comedy                                                                                         |1981  |6.0       |
-|4    |Tsisperi mtebi anu daujerebeli ambavi                                                                    |Comedy                                                                  |1983     |8.0      |
-|5   |Ternosecco                                                                                     |Comedy                                                                                         |1986  |5.0       |
-|6    |Three on a Couch                                                                |Comedy                                                                  |1966     |7.0      |
-|7   |The Search for Santa Paws                                                                                    |Comedy                                                                                         |2010  |5.0       |
-|8    |Who Was That Lady?                                                                  |Comedy                                                                  |1960    |7.0      |
-|9   |Love Aaj Kal                                                                                    |Comedy                                                                                         |2009  |4.0       |
-|10    |Cosi vanna le cose                                                                  |Comedy                                                                  |2008     |3.0      |
+|index|name|genre|episodes|rating|
+|---|---|---|---|---|
+|0|D\.C\.III: Da Capo III Special|Drama, Music, Romance, School|1|6\.49|
+|1|Kimi no Iru Machi: Tasogare Kousaten|Drama, Romance, School, Shounen|2|7\.33|
+|2|Shinkyoku Soukai Polyphonica Crimson S|Drama, Fantasy, Music, Romance, School|12|7\.33|
+|3|Chiisana Love Letter: Mariko to Nemunoki no Kodomo-tachi|Drama, Music, School|1|5\.57|
+|4|Hibike\! Euphonium: Kakedasu Monaka|Drama, Music, School|1|7\.5|
 
-Tabel .2 dinner rekomendasi
+
+Tabel .2 Shigatsu wa kimi no uso rekomendasi
 
 
 ## Evaluation
-pada bagian ini saya mengambil 2 sampel MovieTV yang akan menampilkan rekomendasinya:
+pada bagian ini saya mengambil 2 sampel Anime yang akan menampilkan rekomendasinya:
 
-- Rekomendasi Pada film **Dinner** yang bergenre **Comedy**
+- Rekomendasi Anime yang bernama **Gintama**
 
-|no|title                                                                                                |genre                                                                                                                        |year   |country |
-|--------|----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|-------|--------|
-|1   |Dinner                                                                                      |Comedy                                                                                         |1989  |United States       |
+|index|name|genre|type|episodes|rating|members|
+|---|---|---|---|---|---|---|
+|12|Gintama|Action, Comedy, Historical, Parody, Samurai, Sci-Fi, Shounen|TV|201|9\.04|336376|
 
-Tabel .3 dinner MovieTV
+Tabel .3 Anime Gintama
 
-- berikut output dari rekomendasinya film **Dinner**
+- berikut output dari rekomendasinya Anime **Gintama**
 
-|no|title                                                                                                |genre                                                                                                                        |year   |public_vote|
-|--------|----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|-------|--------|
-|1   |Malizia                                                                                      |Comedy                                                                                         |1973  |6.0       |
-|2    |Crooklyn                                                                   |Comedy                                                                  |1994     |8.0      |
-|3   |Manolesta                                                                                    |Comedy                                                                                         |1981  |6.0       |
-|4    |Tsisperi mtebi anu daujerebeli ambavi                                                                    |Comedy                                                                  |1983     |8.0      |
-|5   |Ternosecco                                                                                     |Comedy                                                                                         |1986  |5.0       |
-|6    |Three on a Couch                                                                |Comedy                                                                  |1966     |7.0      |
-|7   |The Search for Santa Paws                                                                                    |Comedy                                                                                         |2010  |5.0       |
-|8    |Who Was That Lady?                                                                  |Comedy                                                                  |1960    |7.0      |
-|9   |Love Aaj Kal                                                                                    |Comedy                                                                                         |2009  |4.0       |
-|10    |Cosi vanna le cose                                                                  |Comedy                                                                  |2008     |3.0      |
+|index|name|genre|episodes|rating|
+|---|---|---|---|---|
+|0|Gintama: Shinyaku Benizakura-hen|Action, Comedy, Historical, Parody, Samurai, Sci-Fi, Shounen|1|8\.31|
+|1|Gintama: Yorinuki Gintama-san on Theater 2D|Action, Comedy, Historical, Parody, Samurai, Sci-Fi, Shounen|2|8\.6|
+|2|Gintama Movie: Kanketsu-hen - Yorozuya yo Eien Nare|Action, Comedy, Historical, Parody, Samurai, Sci-Fi, Shounen|1|9\.1|
+|3|Gintama Movie: Shinyaku Benizakura-hen|Action, Comedy, Historical, Parody, Samurai, Sci-Fi, Shounen|1|8\.59|
+|4|Gintama: Jump Festa 2014 Special|Action, Comedy, Historical, Parody, Samurai, Sci-Fi, Shounen|1|8\.2|
 
-Tabel .4 dinner rekomendasi
+Tabel .4 Anime rekomendasi Gintama
 
 
-- Rekomendasi pada film **Dead-bang** bergenre **Crime**
+- Rekomendasi pada Anime bernama **One Piece**
 
-|no|title                                                                                                |genre                                                                                                                        |year   |country |
-|--------|----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|-------|--------|
-|1   |Dead-Bang                                                                                      |Crime                                                                                         |1989  |United States       |
+|index|name|genre|type|episodes|rating|members|
+|---|---|---|---|---|---|---|
+|74|One Piece|Action, Adventure, Comedy, Drama, Fantasy, Shounen, Super Power|TV|Unknown|8\.58|504862|
 
-Tabel .5 deadbang MovieTV
+Tabel .5 Anime One Piece
 
-- Output rekomendasi dari film **Dead-Bang**
+- Output rekomendasi dari Anime **One Piece**
 
-|no|title                                                                                                |genre                                                                                                                        |year   |public_vote|
-|--------|----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|-------|--------|
-|1   |A Bullet for Joey                                                                                      |Crime                                                                                         |1955  |6.0       |
-|2    |I Wake Up Screaming                                                                   |Crime                                                                  |1941     |8.0      |
-|3   |Tte de turc                                                                                     |Crime                                                                                         |2010  |6.0       |
-|4    |Hunter: Back in Force                                                                    |Crime                                                                  |2003     |4.0      |
-|5   |Roma violenta                                                                                      |Crime                                                                                         |1975  |6.0       |
-|6    |Jack the Ripper                                                                 |Crime                                                                  |1988     |7.0      |
-|7   |MR 73                                                                                     |Crime                                                                                         |2008  |7.0       |
-|8    |Pollisse                                                                   |Crime                                                                  |20011    |7.0      |
-|9   |The Big Easy                                                                                     |Crime                                                                                         |1986  |7.0       |
-|10    |I Walk Alone                                                                   |Crime                                                                  |1948     |6.0      |
+|index|name|genre|episodes|rating|
+|---|---|---|---|---|
+|0|One Piece: Episode of Nami - Koukaishi no Namida to Nakama no Kizuna|Action, Adventure, Comedy, Drama, Fantasy, Shounen, Super Power|1|8\.27|
+|1|One Piece: Episode of Sabo - 3 Kyoudai no Kizuna Kiseki no Saikai to Uketsugareru Ishi|Action, Adventure, Comedy, Drama, Fantasy, Shounen, Super Power|1|7\.78|
+|2|One Piece: Episode of Merry - Mou Hitori no Nakama no Monogatari|Action, Adventure, Comedy, Drama, Fantasy, Shounen, Super Power|1|8\.29|
+|3|One Piece: Oounabara ni Hirake\! Dekkai Dekkai Chichi no Yume\!|Action, Adventure, Comedy, Fantasy, Shounen, Super Power|1|7\.43|
+|4|One Piece Movie 5: Norowareta Seiken|Action, Adventure, Comedy, Fantasy, Shounen, Super Power|1|7\.44|
 
-Tabel .6 deadbang rekomendasi
+Tabel .5 One Piece rekomendasi
 
-Pada Tabel .4 dan .6 terlihat rekomendasi dari sistem sesuai dengan yang kita ingingkan berdasarkan genre yang pengguna inginkan dengan menampilkan 10 film rekomendasi.
+Pada Tabel .4 dan .5 terlihat rekomendasi dari sistem sesuai dengan yang kita ingingkan berdasarkan genre melalui nama yang pengguna inginkan dengan menampilkan 5 Anime rekomendasi.
 
-mengingat kita mencari rekomendasi berdasarkan genre yang dimiliki oleh MovieTV, mak bisa kita evaluasi dengan rumus :
+mengingat kita mencari rekomendasi berdasarkan Name yang dimiliki oleh Anime, maka bisa kita evaluasi dengan rumus :
 
 #### `P =(  # of our recommendations that are relevant) / (# of items we recommended)`
 
-Pada rumus diatas kita bisa mengetahui presisi dari rekomendasi yang kita berikan. kita telah memberikan 10 rekomendasi berdasarkan genre Comedy dan Crime, dan sistem memberikan kita rekomendasi yang sama. dengan perhitungan **(rekomendasi yang relevan) / (item yang kita rekomendasikan)** 
+Pada rumus diatas kita bisa mengetahui presisi dari rekomendasi yang kita berikan. kita telah memberikan 5 rekomendasi berdasarkan genre melalui nama Gintama dan One Piece, dan sistem memberikan kita rekomendasi yang sama. dengan perhitungan **(rekomendasi yang relevan) / (item yang kita rekomendasikan)** 
 
 oleh karena itu dengan rumus perhitungan sederhana pada rumus diatas sistem rekomendasi bisa memilki presisi yang sangat baik.
 
