@@ -173,6 +173,7 @@ oleh karena itu dengan rumus perhitungan sederhana pada rumus diatas sistem reko
 
 ## Referensi
 - λ.eranga (Nov 29, 2021), Recommendation System with Content-based Filtering from medium https://medium.com/rahasak/recommendation-system-with-content-based-filtering-500231e31a60
-- kunisetti s. (Springer, Singapore), Content-Based Movie Recommendation System Using Genre Correlation, from https://d1wqtxts1xzle7.cloudfront.net/62049148/contentbased20200209-27698-l8hk2i-with-cover-page-v2.pdf?Expires=1664349281&Signature=Odckc84PpURE5-xCpkpqUGGbk2VBLqRu-vBW-MmxGmhZzx4OnEHyY~Z2nQIknqVSeCcZaaufStSZxOsh2hrIayAoxOxmMgC0f7q7FHQprbl4MfYtZXKACJ6thEltg0e-9GoVYle-drD6K47VvA6lE0QnMwiAesyjH4vwDwtjkAOETaW~5~8eCOno7eWKp5koROKmbNgXmIPo593N1nmBjG6G3G9KXzTGxlS0Ek2JmgQl1OzcBz8qJQAj0rGMP4GHF0kgz1AzaanbRRCfEpdumjYbXbz26N5M39GoBRIXPxWdBCSZ6O5pc9oXTtmHt1qB7O8ldBcndN~E6OU-mBSzIQ__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA
+-Anime industry report (2016). http://aja.gr.jp/jigyou/chousa/sangyo_toukei. Accessed 30 Mar 2017
+- Elahi, M., Deldjoo, Y., Bakhshandegan Moghaddam, F., Cella, L., Cereda, S., Cremonesi, P.: Exploring the semantic gap for movie recommendations. In: Proceedings of the Eleventh ACM Conference on Recommender Systems, pp. 326–330 (2017)
 
 
